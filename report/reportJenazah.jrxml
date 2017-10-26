@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportJenazah" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="308e8036-04d7-4e3a-8709-767c483f0571">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     identitasjenazah.`NoJenazah` AS identitasjenazah_NoJenazah,
+     identitasjenazah.`NamaJenazah` AS identitasjenazah_NamaJenazah,
+     identitasjenazah.`TempatLahir` AS identitasjenazah_TempatLahir,
+     identitasjenazah.`TanggalLahir` AS identitasjenazah_TanggalLahir,
+     identitasjenazah.`JenisKelamin` AS identitasjenazah_JenisKelamin,
+     identitasjenazah.`Alamat` AS identitasjenazah_Alamat,
+     identitasjenazah.`TempatWafat` AS identitasjenazah_TempatWafat,
+     identitasjenazah.`TanggalWafat` AS identitasjenazah_TanggalWafat,
+     identitasjenazah.`Keterangan` AS identitasjenazah_Keterangan
+FROM
+     `identitasjenazah` identitasjenazah]]>
+	</queryString>
+	<field name="identitasjenazah_NoJenazah" class="java.lang.String"/>
+	<field name="identitasjenazah_NamaJenazah" class="java.lang.String"/>
+	<field name="identitasjenazah_TempatLahir" class="java.lang.String"/>
+	<field name="identitasjenazah_TanggalLahir" class="java.sql.Date"/>
+	<field name="identitasjenazah_JenisKelamin" class="java.lang.String"/>
+	<field name="identitasjenazah_Alamat" class="java.lang.String"/>
+	<field name="identitasjenazah_TempatWafat" class="java.lang.String"/>
+	<field name="identitasjenazah_TanggalWafat" class="java.sql.Date"/>
+	<field name="identitasjenazah_Keterangan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="9e57b40d-2f64-410f-8528-f9b83d2f19af"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="78f7e448-cc3f-4a86-b731-a9a1e761d10b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Identitas Jenazah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="41" y="46" width="233" height="22" uuid="e6cb4293-dc2f-498b-a0ce-7b66f6ff3e39"/>
+				<text><![CDATA[Aplikasi Sewa Tanah Makam]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="bc79737c-3654-48cf-9751-cc7ddeea4daf"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="61" height="15" uuid="38ad2b1e-c1d9-45b9-b0b3-68d4666469df"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[No. Jenazah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="61" y="19" width="61" height="15" uuid="cb532016-c0f7-40a1-bc85-48b3c48a5fb2"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Nama Jenazah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="122" y="19" width="61" height="15" uuid="da740523-6371-4be0-9665-06b9e3a9c67c"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tempat Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="183" y="19" width="61" height="15" uuid="630b714c-c1a8-43a6-bf04-a0f82d3e9eb9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="244" y="19" width="61" height="15" uuid="cc1e0435-e152-4523-8eb6-f8742bb3ccd9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="305" y="19" width="61" height="15" uuid="e3ed4c5b-a900-4282-972a-4b372b7c4a72"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="366" y="19" width="61" height="15" uuid="ab09f69c-c06f-4821-890c-45349294ff16"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tempat Wafat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="427" y="19" width="67" height="15" uuid="38e56efb-b23c-45d2-9e4c-5513603e1091"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tanggal Wafat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="494" y="19" width="61" height="15" uuid="33663413-d202-4888-8c89-ab578fe49506"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="846e2ee9-a0e5-4386-a7b1-241792e6bcc1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="61" height="15" uuid="af91e78f-6a80-48e6-99b0-cbe8150862c9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_NoJenazah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="61" y="0" width="61" height="15" uuid="a4ed249c-01c1-4c39-984d-6d549d1edd1c"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_NamaJenazah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="122" y="0" width="61" height="15" uuid="dfdf8120-2b91-4b2d-9ef3-c6486e1bf9d3"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_TempatLahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="183" y="0" width="61" height="15" uuid="00eec0a6-8002-48e0-b26f-f0aad22e3dd6"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{identitasjenazah_TanggalLahir})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="244" y="0" width="61" height="15" uuid="8988d389-546b-4f97-b476-94bf8b400bf9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_JenisKelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="305" y="0" width="61" height="15" uuid="fb65c408-fa2b-4d2e-8671-e374936fc831"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="366" y="0" width="61" height="15" uuid="be1c7e61-42b6-4d91-ab61-9d60050e2f8f"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_TempatWafat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="427" y="0" width="67" height="15" uuid="0611734e-3ab0-416e-9ba5-6ef6dca25c08"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{identitasjenazah_TanggalWafat})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="494" y="0" width="61" height="15" uuid="0585eea1-89c0-4bb5-af56-a6fc69e9598f"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitasjenazah_Keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="cf0ee610-211a-4ed6-8186-4469ecc637b4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="a29bc94d-5015-43f4-96bb-cd1fb59aef8d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="de116baf-0c7e-4bdf-be06-3c907a83725f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="a76d086e-111a-4312-9fc1-9f6cd410b710"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

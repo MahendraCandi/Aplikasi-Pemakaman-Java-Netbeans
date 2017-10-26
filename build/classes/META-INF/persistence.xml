@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SewaTanahMakamPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>sewatanahmakam.data.Identitaswaris</class>
+    <class>sewatanahmakam.data.Bloksewamakam</class>
+    <class>sewatanahmakam.data.Identitasjenazah</class>
+    <class>sewatanahmakam.data.Datasewa</class>
+    <class>sewatanahmakam.data.Datatransaksi</class>
+    <class>sewatanahmakam.data.User</class>
+    <class>sewatanahmakam.data.Blokmakam</class>
+    <class>sewatanahmakam.data.Dataarsip</class>
+    <class>sewatanahmakam.data.Usermakam</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbsewamakam?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

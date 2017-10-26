@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportUser" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5553834f-917a-4cbf-95ca-a951da04866b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     usermakam.`KodeUser` AS usermakam_KodeUser,
+     usermakam.`NamaUser` AS usermakam_NamaUser,
+     usermakam.`Password` AS usermakam_Password,
+     usermakam.`HakAkses` AS usermakam_HakAkses
+FROM
+     `usermakam` usermakam]]>
+	</queryString>
+	<field name="usermakam_KodeUser" class="java.lang.String"/>
+	<field name="usermakam_NamaUser" class="java.lang.String"/>
+	<field name="usermakam_Password" class="java.lang.String"/>
+	<field name="usermakam_HakAkses" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="32e21801-cc37-4af7-8acf-4f4e9dd4c6ba"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="43a85948-ecef-4b80-a5da-3d37ad6f9dd8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Laporan User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="34" y="46" width="240" height="22" uuid="0becc1e8-0831-4263-8d51-260845a2aafe"/>
+				<text><![CDATA[Aplikasi Sewa Tanah Makam]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="be36c22f-6116-48db-b213-8a5be5544dd3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="138" height="15" uuid="cb25d073-9230-43bc-9e14-268c7f138ece"/>
+				<text><![CDATA[Kode User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="138" height="15" uuid="2114cd72-ef74-4b20-a012-720ae6291981"/>
+				<text><![CDATA[Nama User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="138" height="15" uuid="78d16aa1-cc49-4e31-b6f9-0c5e0a762c21"/>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="138" height="15" uuid="4d00b5a5-fe3c-4322-bc61-611196251f41"/>
+				<text><![CDATA[Hak Akses]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="e4957b9d-9f21-445d-821b-38a79f939c7f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="138" height="15" uuid="0a8d0c85-8670-4797-864b-09af2b447d74"/>
+				<textFieldExpression><![CDATA[$F{usermakam_KodeUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="138" height="15" uuid="a83053c4-1a69-42f6-ae5f-ea001cc8e87b"/>
+				<textFieldExpression><![CDATA[$F{usermakam_NamaUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="138" height="15" uuid="128f3a32-1a93-4e64-922e-e12a4a031001"/>
+				<textFieldExpression><![CDATA[$F{usermakam_Password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="91f126ee-1508-477c-bd1e-72449bb32aef"/>
+				<textFieldExpression><![CDATA[$F{usermakam_HakAkses}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="adbf3c80-4165-4577-aa5a-766270d70260"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="1b7e5561-50eb-458b-b82b-d6d69a2344eb"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="5fb020eb-82e4-4509-b3a6-ba3973e59c06"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="bf5919b2-cac0-4943-bf7b-b022fe3c3d00"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

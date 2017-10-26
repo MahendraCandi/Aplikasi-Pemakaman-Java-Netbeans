@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportWaris" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3307266-a5dc-417d-9c09-15775bfb2fd7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     identitaswaris.`NoWaris` AS identitaswaris_NoWaris,
+     identitaswaris.`NamaWaris` AS identitaswaris_NamaWaris,
+     identitaswaris.`TanggalLahir` AS identitaswaris_TanggalLahir,
+     identitaswaris.`JenisKelamin` AS identitaswaris_JenisKelamin,
+     identitaswaris.`NoTelp` AS identitaswaris_NoTelp,
+     identitaswaris.`Alamat` AS identitaswaris_Alamat,
+     identitaswaris.`Keterangan` AS identitaswaris_Keterangan
+FROM
+     `identitaswaris` identitaswaris]]>
+	</queryString>
+	<field name="identitaswaris_NoWaris" class="java.lang.String"/>
+	<field name="identitaswaris_NamaWaris" class="java.lang.String"/>
+	<field name="identitaswaris_TanggalLahir" class="java.sql.Date"/>
+	<field name="identitaswaris_JenisKelamin" class="java.lang.String"/>
+	<field name="identitaswaris_NoTelp" class="java.lang.String"/>
+	<field name="identitaswaris_Alamat" class="java.lang.String"/>
+	<field name="identitaswaris_Keterangan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="3706f0c4-ede6-4f80-964b-a5f11f4aa871"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="5910c1e9-8c1b-40c9-af45-25a91a2ff67e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Identitas Waris]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="41" y="46" width="233" height="22" uuid="25bbc8d6-414a-455c-801c-7654f7966538"/>
+				<text><![CDATA[Aplikasi Sewa Tanah Makam]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="65f7f068-e427-437c-af55-e901aaffe7cd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="192ecf14-77a9-414f-9494-36dc53094ea5"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[No. Waris]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="e9fd3095-cd8c-4372-bec0-649d64a6d822"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Nama Waris]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="820d2824-06eb-4dbd-9270-79f23ca76f5f"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="7e4ee25f-ec5f-4d12-9a30-d680ffe901ab"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="42d04201-9093-48db-9910-d4b44db09f71"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[No. Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="febcf99c-b93d-4daf-a090-c72533f8b793"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="76e58b85-dcbb-4101-b818-b4d894be36f5"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement style="Detail" x="0" y="-3" width="79" height="38" uuid="7b36f848-8fcc-4f52-aeb4-0edc2304762d"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_NoWaris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="-3" width="79" height="38" uuid="162e4025-b7b5-402c-8a04-3b9cc556e961"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_NamaWaris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="-3" width="79" height="38" uuid="e9e0ab80-7099-447e-9a63-18bdfc3d0fd7"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{identitaswaris_TanggalLahir})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="-3" width="79" height="38" uuid="669b22fe-ac6b-44e8-930c-f8474f2002f9"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_JenisKelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="-3" width="79" height="38" uuid="d3c4f968-387a-4b06-b11d-566bb9a6f821"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_NoTelp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="-3" width="79" height="38" uuid="93be8973-b972-4ddf-b49a-e54795ed858c"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="-3" width="79" height="38" uuid="b4073478-84e4-4f05-9e97-e82e9426d60f"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identitaswaris_Keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="4" uuid="30a9ebea-e7cf-4ce8-a26f-f4f079b43f11"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="19be1d84-fe0f-4c70-a618-5be7adcd064e"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="cb441c08-0274-47e4-8dcd-239729e07017"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="26a86c53-21f2-4d72-a491-35645957b0fd"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

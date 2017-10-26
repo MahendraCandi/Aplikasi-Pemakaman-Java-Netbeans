@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportBlokMakam" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="10cb9e93-86dc-4953-bd3e-7332d226fc9b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     blokmakam.`KodeBlok` AS blokmakam_KodeBlok,
+     blokmakam.`Kategori` AS blokmakam_Kategori,
+     blokmakam.`NamaBlok` AS blokmakam_NamaBlok,
+     blokmakam.`Lokasi` AS blokmakam_Lokasi,
+     blokmakam.`HargaSewa` AS blokmakam_HargaSewa,
+     blokmakam.`Keterangan` AS blokmakam_Keterangan
+FROM
+     `blokmakam` blokmakam]]>
+	</queryString>
+	<field name="blokmakam_KodeBlok" class="java.lang.String"/>
+	<field name="blokmakam_Kategori" class="java.lang.String"/>
+	<field name="blokmakam_NamaBlok" class="java.lang.String"/>
+	<field name="blokmakam_Lokasi" class="java.lang.String"/>
+	<field name="blokmakam_HargaSewa" class="java.lang.Double"/>
+	<field name="blokmakam_Keterangan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="47918d06-b4c7-4c95-b5ad-b3c1938fa174"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="74b16383-1468-4374-b08f-4148ba026ba8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Blok Makam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="40" y="46" width="234" height="22" uuid="5e74a8dc-97c7-43ee-abd4-0e563f7d641e"/>
+				<text><![CDATA[Aplikasi Sewa Tanah Makam]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="6dfe825f-fe5f-4cfb-b2c6-595b584f169b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="fb7c4dd4-ad23-4038-b183-41e55ed7ff97"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Kode Blok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="e729b47b-1535-4c50-86ad-509028bdfcb5"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="732ee8f5-0541-461b-904f-5b02b484d162"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Nama Blok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="ae8a860e-3ba8-4570-af81-288f44047516"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Lokasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="b2b38eb6-c30c-486b-ba1a-b7f4d2feb251"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Harga Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="333c92ce-c65d-4385-a3dd-f8e7591e9fd0"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="549014d8-5e23-408a-8e5d-907b7c3e63d8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="da2e21cd-d7db-42a9-b68a-85828b0b16cb"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_KodeBlok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="2630e8b8-dda1-4ea3-b3a6-83258d57d52e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_Kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="457b1551-1195-41cd-8397-bdb7833e1c1e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_NamaBlok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="235efe52-bac7-4dc9-97aa-515b8e87744e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_Lokasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="1cf5aba5-2d3f-40e3-b854-65ed8853d932"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_HargaSewa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="d876d148-f274-40b0-85a9-51d141d87082"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{blokmakam_Keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="77137f90-1c61-4bbb-99d3-6208014d6f31"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="7f8de639-ca15-4ad7-824b-cc58ceafaa55"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="ecacd524-0fc2-45f8-b19f-27026639de70"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="472d6b3c-0fb0-469c-b330-ed240c944360"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
