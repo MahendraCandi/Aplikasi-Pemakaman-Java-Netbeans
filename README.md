@@ -3,7 +3,7 @@ Desktop Program Java Swing ini dibuat dengan Netbeans IDE dengan tampilan Flat D
 Dimana didalamnya terdapat sistem pendataan berupa data ahli waris, data jenazah dan data makam yang tersedia dan telah terpakai.
 Data-data tersebut ditampung didalam suatu data arsip yang mempunyai kadaluarsa tanggal selama dua tahun.
 User juga dapat menyimpan image KTP dan KK.
-Dalam menghubungkan ke database program ini menggunakan JPA atau Hibernate.
+Dalam menghubungkan ke database, program ini menggunakan Eclipse Link dan JPA.
 
 ----**-----
 
